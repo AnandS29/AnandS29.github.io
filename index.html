@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap">
+
+    <style>
+        body {
+        background:#FFFFFF;  
+        font-family: 'Libre Baskerville', serif;
+        text-align: justify;
+        margin-left: 50px; 
+        margin-right: 50px;
+        line-height:25px;
+        font-size: 15px;
+        }
+
+        #projtitle {
+        font-weight: bold;
+        }
+
+        #projabstract {
+        margin-left: 15px;
+        font-size: 12px;
+        }
+
+        #projdetails {
+            margin-bottom: 20px;
+        }
+
+        #projcoauthor {
+            color: #000000;
+            font-size: 15px;
+            font-weight: normal;
+        }
+
+        #sep {
+            font-weight: 100000;
+            color: #000000;
+        }
+
+        #projme {
+            color: #000000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #projlink {
+            color: #000000;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: #000000;
+        }
+
+        a:visited {
+            color: #000000;
+        }
+
+        a:hover {
+            color: #cd9a22;
+        }
+
+        .buttons {
+            margin-left: 15px;
+        }
+
+        .button-2 {
+            background-color: rgba(51, 51, 51, 0.05);
+            border-radius: 8px;
+            border-width: 0;
+            color: #333333;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 6px 18px;
+            text-align: center;
+            transition: all 200ms;
+            vertical-align: baseline;
+            white-space: nowrap;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin-right: 10px;
+        }
+
+        #working #projtitle {
+            color: #2f699f;
+        }
+
+        #published #projtitle {
+            color: #cb5933;
+        }
+
+        #working, #published, #bio {
+            margin-left: 40px;
+            padding-bottom: 5px;
+        }
+
+        .profile-pic-wrapper { 
+            width: 240px;
+            height: 240px;
+            border-radius: 100%; 
+            overflow: hidden; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        } 
+
+        .profile-pic { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+  </head>
+
+  <body>
+    <div id="top">
+        
+        <center>
+
+        <p style = "font-size:40px; margin-bottom:10px; margin-top:80px;">
+            Anand Siththaranjan
+        </p>
+
+        <p style = "font-size: 15px; margin-bottom:0px; color:#525252; ">
+            Doctoral Candidate in Electrical Engineering and Computer Science at UC Berkeley
+        </p>
+
+        <p>
+            <a
+            href="https://scholar.google.com/citations?hl=en&user=qYXPDjQAAAAJ">Google
+            Scholar</a> | <a href="mailto:anandks@stanford.edu">Email</a> | <a href="assets/pdf/cv.pdf">CV</a>
+        </p>
+
+        <br>
+
+        </center>
+    </div>
+    <div style="margin-left: 20%;">
+    <p style="font-size:20px;"> <b> bio </b>  </p>
+    <div style="width: 100%;">
+        <div id="bio" style="width:50%; float:left; margin-right: 50px;">
+            <p>
+                Hello! I’m a final year EECS PhD student at UC Berkeley advised
+                by Stuart Russell and Claire Tomlin, and a Fellow at the Kavli
+                Center for Science, Ethics, and the Public. 
+
+                <br><br>
+                
+                My research interest are in pure and applied game theory, with a focus on
+                communication and market design. 
+                
+                <br><br>
+                
+                In the Fall of 2025 I’ll be joining the Economics PhD program at Stanford.
+            </p>
+        </div>
+
+        <div class="profile-pic-wrapper" style="">
+            <img src="assets/imgs/prof-pic.jpg" class="profile-pic">
+        </div>
+    </div>
+
+    <!-- <br> -->
+
+    <p style="font-size:20px;"> <b> working papers </b>  </p>
+    <div id="working">
+
+        <details id="projdetails">
+            <summary id="projtitle">Multi-Modal Paired Exchange
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor"> <span id="projme">Anand Siththaranjan</span></span>
+                
+                <span id="sep">\\</span>
+                
+                <span id="projlink">    
+                    [<a href="assets/pdfs/multi-modal.pdf">pdf</a>]
+                </span>
+            </summary>
+            <p id="projabstract">
+                This paper develops a model of paired exchange that integrates
+                multiple donation technologies with observable risks. Through
+                integration, we aim to enrich the set of potential patient-donor matches
+                over benchmark models while reducing the aggregate risk placed on
+                donors. We construct pairwise exchange mechanisms that satisfy
+                efficiency, stability, and strategy-proofness, and study applications
+                including exchanges with multiple organs, kidney exchange with
+                ABO-desensitization, and exchanges with multiple donors. In a case-study
+                of kidney-liver exchanges, we analyze welfare improvements over
+                non-integrated exchanges. Simulations find a 10 to 20% relative
+                increase in transplants as the proportion of risk-tolerant donors are
+                varied.
+            </p>
+        </details>
+
+
+        <details id="projdetails">
+            <summary id="projtitle">Kidney Exchange with Multiple Donors
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor"> <span id="projme">Anand Siththaranjan</span></span>
+                
+                <span id="sep">\\</span>
+                
+                <span id="projlink">    
+                    [<a href="assets/pdfs/multi-donor.pdf">pdf</a>]
+                </span>
+            </summary>
+            <p id="projabstract">
+                This paper studies the problem of finding efficient, strategy-proof, and weak-core stable mechanisms for kidney paired exchange under cycle size restrictions. We allow patients to have multiple donors, where their private information is their strict preference over the donor used. We show that no desirable pairwise mechanism exists, but under mild conditions constructively show that such a mechanism exists when cycles of length three are allowed. Our results leverage the structure of blood type compatibility to overcome classic impossibility results due to cycle size restrictions, and we provide intuition to this end. When considering the number of transplants made, imposing strategy-proofness while allowing multiple donors introduces a tradeoff when compared to a complete information single-donor baseline. Nevertheless, we show through simulation using US population data that in most cases there is a relative increase in the number of transplants. With sufficiently many patients with more than one donor this can range from approximately $5$ to $20\%$.
+            </p>
+        </details>
+
+        <details id="projdetails">
+            <summary id="projtitle">When Can Communication Be Informative?
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor"> <span id="projme">Anand Siththaranjan</span> and Yuichiro Kamada</span>
+                
+                <span id="sep">\\</span>
+
+                <span id="projlink">    
+                    [<a href="assets/pdfs/communication.pdf">pdf</a>]
+                </span>
+            </summary>
+            <p id="projabstract">
+                When do cheap talk games admit informative equilibria? In a binary-action
+                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
+                setting, we find that the preference alignment no longer captures the existence of an
+                informative equilibrium in general. We demonstrate that even if the preferences are
+                perfectly misaligned, there may exist an informative equilibrium. With a restriction
+                to binary states, we find that such preferences do not allow the Receiver to improve
+                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
+                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
+                or different to, some equilibrium in cheap talk.
+            </p>
+        </details>
+
+        <details id="projdetails">
+            <summary id="projtitle">Social Planning with the Replicator Dynamics
+            (R&R LCSS)
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor"> <span id="projme">Anand
+                Siththaranjan*</span> and Claire Tomlin</span>
+                
+                <span id="sep">\\</span>
+
+                <span id="projlink">    
+                    [<a href="assets/pdfs/planning-replicator.pdf">pdf</a>]
+                </span>
+            </summary>
+            <p id="projabstract">
+                When do cheap talk games admit informative equilibria? In a binary-action
+                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
+                setting, we find that the preference alignment no longer captures the existence of an
+                informative equilibrium in general. We demonstrate that even if the preferences are
+                perfectly misaligned, there may exist an informative equilibrium. With a restriction
+                to binary states, we find that such preferences do not allow the Receiver to improve
+                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
+                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
+                or different to, some equilibrium in cheap talk.
+            </p>
+        </details>
+
+        <details id="projdetails">
+            <summary id="projtitle">Intent Demonstration in General-Sum Dynamic Games via Iterative Linear-Quadratic Approximations
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor">Jingqi Li et al.</span>
+                
+                <span id="sep">\\</span>
+
+                <span id="projlink">    
+                    [<a href="https://arxiv.org/abs/2402.10182">arxiv</a>]
+                </span>
+            </summary>
+            <p id="projabstract">
+                When do cheap talk games admit informative equilibria? In a binary-action
+                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
+                setting, we find that the preference alignment no longer captures the existence of an
+                informative equilibrium in general. We demonstrate that even if the preferences are
+                perfectly misaligned, there may exist an informative equilibrium. With a restriction
+                to binary states, we find that such preferences do not allow the Receiver to improve
+                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
+                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
+                or different to, some equilibrium in cheap talk.
+            </p>
+        </details>
+    </div>
+
+    <p style="font-size:20px;"> <b> published </b>  </p>
+    <div id="published">
+
+        <details id="projdetails">
+            <summary id="projtitle">Distributional Preference Learning (ICLR 2024)
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor"><span id="projme">Anand
+                Siththaranjan*</span>, Cassidy Laidlaw*, and Dylan
+                Hadfield-Menell</span>
+                
+                <span id="sep">\\</span>
+
+                <span id="projlink">    
+                    [<a href="https://arxiv.org/abs/2312.08358">arxiv</a>]
+                </span>
+            </summary>
+            <p id="projabstract">
+                When do cheap talk games admit informative equilibria? In a binary-action
+                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
+                setting, we find that the preference alignment no longer captures the existence of an
+                informative equilibrium in general. We demonstrate that even if the preferences are
+                perfectly misaligned, there may exist an informative equilibrium. With a restriction
+                to binary states, we find that such preferences do not allow the Receiver to improve
+                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
+                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
+                or different to, some equilibrium in cheap talk.
+            </p>
+        </details>
+
+        <details id="projdetails">
+            <summary id="projtitle">AI Alignment with Changing and Influenceable
+            Reward Functions (ICML 2024)
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor">Micah Carroll et al.</span>
+                
+                <span id="sep">\\</span>
+
+                <span id="projlink">    
+                    [<a href="https://arxiv.org/abs/2405.17713">arxiv</a>]
+                </span>
+            </summary>
+            <p id="projabstract">
+                When do cheap talk games admit informative equilibria? In a binary-action
+                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
+                setting, we find that the preference alignment no longer captures the existence of an
+                informative equilibrium in general. We demonstrate that even if the preferences are
+                perfectly misaligned, there may exist an informative equilibrium. With a restriction
+                to binary states, we find that such preferences do not allow the Receiver to improve
+                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
+                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
+                or different to, some equilibrium in cheap talk.
+            </p>
+        </details>
+
+        <details id="projdetails">
+            <summary id="projtitle">Open Problems and Fundamental Limitations of
+            RLHF (TMLR 2023)
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor">Stephen Casper et al.</span>
+                
+                <span id="sep">\\</span>
+
+                <span id="projlink">    
+                    [<a href="https://arxiv.org/abs/2307.15217">arxiv</a>]
+                </span>
+            </summary>
+            <p id="projabstract">
+                When do cheap talk games admit informative equilibria? In a binary-action
+                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
+                setting, we find that the preference alignment no longer captures the existence of an
+                informative equilibrium in general. We demonstrate that even if the preferences are
+                perfectly misaligned, there may exist an informative equilibrium. With a restriction
+                to binary states, we find that such preferences do not allow the Receiver to improve
+                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
+                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
+                or different to, some equilibrium in cheap talk.
+            </p>
+        </details>
+
+        <details id="projdetails">
+            <summary id="projtitle">On the Computational Consequences of Cost
+            Function Design in Nonlinear Optimal Control (CDC 2022)
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor">Tyler Westenbroek et al.</span>
+                
+                <span id="sep">\\</span>
+
+                <span id="projlink">    
+                    [<a href="https://ieeexplore.ieee.org/abstract/document/9992830">ieee</a>]
+                </span>
+            </summary>
+            <p id="projabstract">
+                When do cheap talk games admit informative equilibria? In a binary-action
+                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
+                setting, we find that the preference alignment no longer captures the existence of an
+                informative equilibrium in general. We demonstrate that even if the preferences are
+                perfectly misaligned, there may exist an informative equilibrium. With a restriction
+                to binary states, we find that such preferences do not allow the Receiver to improve
+                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
+                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
+                or different to, some equilibrium in cheap talk.
+            </p>
+        </details>
+
+        <details id="projdetails">
+            <summary id="projtitle">Analyzing Human Models that Adapt Online
+            (ICRA 2021)
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor">Andrea Bajcsy et al.</span>
+                
+                <span id="sep">\\</span>
+
+                <span id="projlink">    
+                    [<a href="https://ieeexplore.ieee.org/abstract/document/9561652">ieee</a>]
+                </span>
+            </summary>
+            <p id="projabstract">
+                When do cheap talk games admit informative equilibria? In a binary-action
+                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
+                setting, we find that the preference alignment no longer captures the existence of an
+                informative equilibrium in general. We demonstrate that even if the preferences are
+                perfectly misaligned, there may exist an informative equilibrium. With a restriction
+                to binary states, we find that such preferences do not allow the Receiver to improve
+                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
+                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
+                or different to, some equilibrium in cheap talk.
+            </p>
+        </details>
+    </div>
+    </div>
+
+    <center>
+        <p style = "font-size: 15px; margin-bottom:0px; color:#525252;
+        font-style:italic; padding-bottom: 60px;">
+            Designed by me, inspired by <a href="https://agathepernoud.com/">this</a>
+        </p>
+    </center>
+  </body>
+</html>
