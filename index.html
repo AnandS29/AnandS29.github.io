@@ -93,6 +93,10 @@
             margin-right: 10px;
         }
 
+        #inprogress #projtitle {
+            color: #9e36d6;
+        }
+
         #working #projtitle {
             color: #2f699f;
         }
@@ -101,7 +105,7 @@
             color: #cb5933;
         }
 
-        #working, #published, #bio {
+        #working, #published, #bio, #inprogress {
             margin-left: 40px;
             padding-bottom: 5px;
         }
@@ -162,7 +166,14 @@
                 <br><br>
                 
                 My research interest are in pure and applied game theory, with a focus on
-                communication and market design. 
+                communication and market design. My work often intersects with
+                artificial intelligence, control theory, healthcare, and philosophy.
+
+                <br><br>
+
+                I have published in top control theory and robotics venues -
+                such as ICRA, CDC, and LCSS - and in top AI venues - such as
+                ICML, ICLR, and TMLR.
                 
                 <br><br>
                 
@@ -176,6 +187,88 @@
     </div>
 
     <br>
+
+
+
+    <p style="font-size:20px;"> <b> work in progress </b>  </p>
+    <div id="inprogress" style="">
+
+        <details id="projdetails">
+            <summary id="projtitle">Participation in Kidney Exchange
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor"> <span id="projme">Siththaranjan</span>,
+                Valenzuela-Stookey, Ergin</span>
+                
+                <!-- <span id="sep">\\</span>
+                
+                <span id="projlink">    
+                    [<a href="assets/pdfs/multi-modal.pdf">pdf</a>]
+                </span> -->
+            </summary>
+            <p id="projabstract">
+                Stay tuned!
+            </p>
+        </details>
+
+        <details id="projdetails">
+            <summary id="projtitle">Pairwise Kidney Exchange with Chains
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor"> <span id="projme">Siththaranjan</span>
+                and Ergin</span>
+                
+                <!-- <span id="sep">\\</span>
+                
+                <span id="projlink">    
+                    [<a href="assets/pdfs/multi-modal.pdf">pdf</a>]
+                </span> -->
+            </summary>
+            <p id="projabstract">
+                Stay tuned!
+            </p>
+        </details>
+
+        <details id="projdetails">
+            <summary id="projtitle">Efficiency and Alienation
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor"> <span id="projme">Siththaranjan</span>
+                and Mosse</span>
+                
+                <!-- <span id="sep">\\</span>
+                
+                <span id="projlink">    
+                    [<a href="assets/pdfs/multi-modal.pdf">pdf</a>]
+                </span> -->
+            </summary>
+            <p id="projabstract">
+                Stay tuned!
+            </p>
+        </details>
+
+        <details id="projdetails">
+            <summary id="projtitle">Incentive-Compatible Feedback Control
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor"> <span id="projme">Siththaranjan*</span>
+                and Tomlin</span>
+                
+                <!-- <span id="sep">\\</span>
+                
+                <span id="projlink">    
+                    [<a href="assets/pdfs/multi-modal.pdf">pdf</a>]
+                </span> -->
+            </summary>
+            <p id="projabstract">
+                Stay tuned!
+            </p>
+        </details>
+    </div>
 
     <p style="font-size:20px;"> <b> working papers </b>  </p>
     <div id="working" style="">
@@ -256,7 +349,10 @@
 
         <details id="projdetails">
             <summary id="projtitle">Social Planning with the Replicator Dynamics
-            (R&R LCSS)
+                
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor">Conditional Accept @ LCSS</span>
 
                 <span id="sep">\\</span>
 
@@ -270,15 +366,22 @@
                 </span>
             </summary>
             <p id="projabstract">
-                When do cheap talk games admit informative equilibria? In a binary-action
-                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
-                setting, we find that the preference alignment no longer captures the existence of an
-                informative equilibrium in general. We demonstrate that even if the preferences are
-                perfectly misaligned, there may exist an informative equilibrium. With a restriction
-                to binary states, we find that such preferences do not allow the Receiver to improve
-                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
-                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
-                or different to, some equilibrium in cheap talk.
+                Approaches to social planning tend to assume that
+                the behavior of agents is at an equilibrium, yet in practice
+                people’s behavior gradually adapts to their experiences. In
+                this work, a model of social planning under the replicator
+                dynamics is studied. This model allows for a social planner
+                to control the learning process of agents by influencing the
+                relative fitness of different strategies. The desiderata that such a
+                social planner would ideally achieve – exponential stability and
+                budget-balance – are described. Existence of a solution for any
+                full-support distribution, as well as an analysis of its properties,
+                are shown constructively by leveraging classical tools from
+                geometric control theory. Though the solution is optimal in an
+                environment without transfer costs, this may not generally hold
+                otherwise. We formulate a relevant optimal control problem
+                to model this setting, and determine performance guarantees
+                based in our original solution.
             </p>
         </details>
 
@@ -296,15 +399,7 @@
                 </span>
             </summary>
             <p id="projabstract">
-                When do cheap talk games admit informative equilibria? In a binary-action
-                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
-                setting, we find that the preference alignment no longer captures the existence of an
-                informative equilibrium in general. We demonstrate that even if the preferences are
-                perfectly misaligned, there may exist an informative equilibrium. With a restriction
-                to binary states, we find that such preferences do not allow the Receiver to improve
-                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
-                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
-                or different to, some equilibrium in cheap talk.
+                Autonomous agents should be able to coordinate with other agents without knowing their intents ahead of time. While prior work has studied how agents can gather information about the intent of others, in this work, we study the inverse problem: how agents can demonstrate their intent to others, within the framework of general-sum dynamic games. We first present a model of this intent demonstration problem and then propose an algorithm that enables an agent to trade off their task performance and intent demonstration to improve the overall system's performance. To scale to continuous states and action spaces as well as to nonlinear dynamics and costs, our algorithm leverages linear-quadratic approximations with an efficient intent teaching guarantee. Our empirical results show that intent demonstration accelerates other agents' learning and enables the demonstrating agent to balance task performance with intent expression.
             </p>
         </details>
     </div>
@@ -313,7 +408,12 @@
     <div id="published">
 
         <details id="projdetails">
-            <summary id="projtitle">Distributional Preference Learning (ICLR 2024)
+            <summary id="projtitle">Distributional Preference Learning
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor">ICLR 2024</span>
+
 
                 <span id="sep">\\</span>
 
@@ -325,25 +425,22 @@
 
                 <span id="projlink">    
                     [<a href="https://arxiv.org/abs/2312.08358">arxiv</a>]
+                    [<a href="https://github.com/cassidylaidlaw/hidden-context">code</a>]
                 </span>
             </summary>
             <p id="projabstract">
-                When do cheap talk games admit informative equilibria? In a binary-action
-                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
-                setting, we find that the preference alignment no longer captures the existence of an
-                informative equilibrium in general. We demonstrate that even if the preferences are
-                perfectly misaligned, there may exist an informative equilibrium. With a restriction
-                to binary states, we find that such preferences do not allow the Receiver to improve
-                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
-                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
-                or different to, some equilibrium in cheap talk.
+                In practice, preference learning from human feedback depends on incomplete data with hidden context. Hidden context refers to data that affects the feedback received, but which is not represented in the data used to train a preference model. This captures common issues of data collection, such as having human annotators with varied preferences, cognitive processes that result in seemingly irrational behavior, and combining data labeled according to different criteria. We prove that standard applications of preference learning, including reinforcement learning from human feedback (RLHF), implicitly aggregate over hidden contexts according to a well-known voting rule called Borda count. We show this can produce counter-intuitive results that are very different from other methods which implicitly aggregate via expected utility. Furthermore, our analysis formalizes the way that preference learning from users with diverse values tacitly implements a social choice function. A key implication of this result is that annotators have an incentive to misreport their preferences in order to influence the learned model, leading to vulnerabilities in the deployment of RLHF. As a step towards mitigating these problems, we introduce a class of methods called distributional preference learning (DPL). DPL methods estimate a distribution of possible score values for each alternative in order to better account for hidden context. Experimental results indicate that applying DPL to RLHF for LLM chatbots identifies hidden context in the data and significantly reduces subsequent jailbreak vulnerability.
             </p>
         </details>
 
         <details id="projdetails">
             <summary id="projtitle">AI Alignment with Changing and Influenceable
-            Reward Functions (ICML 2024)
+            Reward Functions
 
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor">ICML 2024</span>
+                
                 <span id="sep">\\</span>
 
                 <span id="projcoauthor">Micah Carroll et al.</span>
@@ -355,21 +452,17 @@
                 </span>
             </summary>
             <p id="projabstract">
-                When do cheap talk games admit informative equilibria? In a binary-action
-                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
-                setting, we find that the preference alignment no longer captures the existence of an
-                informative equilibrium in general. We demonstrate that even if the preferences are
-                perfectly misaligned, there may exist an informative equilibrium. With a restriction
-                to binary states, we find that such preferences do not allow the Receiver to improve
-                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
-                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
-                or different to, some equilibrium in cheap talk.
+                Existing AI alignment approaches assume that preferences are static, which is unrealistic: our preferences change, and may even be influenced by our interactions with AI systems themselves. To clarify the consequences of incorrectly assuming static preferences, we introduce Dynamic Reward Markov Decision Processes (DR-MDPs), which explicitly model preference changes and the AI's influence on them. We show that despite its convenience, the static-preference assumption may undermine the soundness of existing alignment techniques, leading them to implicitly reward AI systems for influencing user preferences in ways users may not truly want. We then explore potential solutions. First, we offer a unifying perspective on how an agent's optimization horizon may partially help reduce undesirable AI influence. Then, we formalize different notions of AI alignment that account for preference change from the outset. Comparing the strengths and limitations of 8 such notions of alignment, we find that they all either err towards causing undesirable AI influence, or are overly risk-averse, suggesting that a straightforward solution to the problems of changing preferences may not exist. As there is no avoiding grappling with changing preferences in real-world settings, this makes it all the more important to handle these issues with care, balancing risks and capabilities. We hope our work can provide conceptual clarity and constitute a first step towards AI alignment practices which explicitly account for (and contend with) the changing and influenceable nature of human preferences.
             </p>
         </details>
 
         <details id="projdetails">
             <summary id="projtitle">Open Problems and Fundamental Limitations of
-            RLHF (TMLR 2023)
+            RLHF
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor">TMLR 2023 & ICLR 2025</span>
 
                 <span id="sep">\\</span>
 
@@ -382,21 +475,17 @@
                 </span>
             </summary>
             <p id="projabstract">
-                When do cheap talk games admit informative equilibria? In a binary-action
-                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
-                setting, we find that the preference alignment no longer captures the existence of an
-                informative equilibrium in general. We demonstrate that even if the preferences are
-                perfectly misaligned, there may exist an informative equilibrium. With a restriction
-                to binary states, we find that such preferences do not allow the Receiver to improve
-                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
-                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
-                or different to, some equilibrium in cheap talk.
+                Reinforcement learning from human feedback (RLHF) is a technique for training AI systems to align with human goals. RLHF has emerged as the central method used to finetune state-of-the-art large language models (LLMs). Despite this popularity, there has been relatively little public work systematizing its flaws. In this paper, we (1) survey open problems and fundamental limitations of RLHF and related methods; (2) overview techniques to understand, improve, and complement RLHF in practice; and (3) propose auditing and disclosure standards to improve societal oversight of RLHF systems. Our work emphasizes the limitations of RLHF and highlights the importance of a multi-faceted approach to the development of safer AI systems.
             </p>
         </details>
 
         <details id="projdetails">
             <summary id="projtitle">On the Computational Consequences of Cost
-            Function Design in Nonlinear Optimal Control (CDC 2022)
+            Function Design in Nonlinear Optimal Control
+
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor">CDC 2022</span>
 
                 <span id="sep">\\</span>
 
@@ -409,21 +498,16 @@
                 </span>
             </summary>
             <p id="projabstract">
-                When do cheap talk games admit informative equilibria? In a binary-action
-                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
-                setting, we find that the preference alignment no longer captures the existence of an
-                informative equilibrium in general. We demonstrate that even if the preferences are
-                perfectly misaligned, there may exist an informative equilibrium. With a restriction
-                to binary states, we find that such preferences do not allow the Receiver to improve
-                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
-                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
-                or different to, some equilibrium in cheap talk.
+                Optimal control is an essential tool for stabilizing complex nonlinear systems. However, despite the extensive impacts of methods such as receding horizon control, dynamic programming and reinforcement learning, the design of cost functions for a particular system often remains a heuristic-driven process of trial and error. In this paper we seek to gain insights into how the choice of cost function interacts with the underlying structure of the control system and impacts the amount of computation required to obtain a stabilizing controller. We treat the cost design problem as a two-step process where the designer specifies outputs for the system that are to be penalized and then modulates the relative weighting of the inputs and the outputs in the cost. To characterize the computational burden associated to obtaining a stabilizing controller with a particular cost, we bound the prediction horizon required by receding horizon methods and the number of iterations required by dynamic programming methods to meet this requirement. Our theoretical results highlight a qualitative separation between what is possible, from a design perspective, when the chosen outputs induce either minimum-phase or non-minimum-phase behavior. Simulation studies indicate that this separation also holds for modern reinforcement learning methods.
             </p>
         </details>
 
         <details id="projdetails">
             <summary id="projtitle">Analyzing Human Models that Adapt Online
-            (ICRA 2021)
+                
+                <span id="sep">\\</span>
+
+                <span id="projcoauthor">ICRA 2021</span>
 
                 <span id="sep">\\</span>
 
@@ -436,15 +520,7 @@
                 </span>
             </summary>
             <p id="projabstract">
-                When do cheap talk games admit informative equilibria? In a binary-action
-                model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
-                setting, we find that the preference alignment no longer captures the existence of an
-                informative equilibrium in general. We demonstrate that even if the preferences are
-                perfectly misaligned, there may exist an informative equilibrium. With a restriction
-                to binary states, we find that such preferences do not allow the Receiver to improve
-                their payoffs over a babbling equilibrium, yet this intuitive prediction does not hold
-                beyond the binary-state assumption. We identify a different set of alignment conditions between preferences such that Bayesian persuasion realizes payoffs the same as,
-                or different to, some equilibrium in cheap talk.
+                Predictive human models often need to adapt their parameters online from human data. This raises previously ignored safety-related questions for robots relying on these models such as what the model could learn online and how quickly could it learn it. For instance, when will the robot have a confident estimate in a nearby human’s goal? Or, what parameter initializations guarantee that the robot can learn the human’s preferences in a finite number of observations? To answer such analysis questions, our key idea is to model the robot’s learning algorithm as a dynamical system where the state is the current model parameter estimate and the control is the human data the robot observes. This enables us to leverage tools from reachability analysis and optimal control to compute the set of hypotheses the robot could learn in finite time, as well as the worst and best-case time it takes to learn them. We demonstrate the utility of our analysis tool in four human-robot domains, including autonomous driving and indoor navigation.
             </p>
         </details>
     </div>
