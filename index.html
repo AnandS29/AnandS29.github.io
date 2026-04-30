@@ -2,216 +2,415 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anand Siththaranjan</title>
+    <meta name="description" content="Anand Siththaranjan, PhD student in Economics at Stanford. Research in game theory, communication, market design, AI, and control theory.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
 
     <style>
+        :root {
+            --bg: #fbfaf7;
+            --paper: #ffffff;
+            --text: #1e2320;
+            --muted: #606b64;
+            --rule: #ded8cd;
+            --accent: #8a4b2c;
+            --accent-dark: #5f321f;
+            --link-bg: #f4efe7;
+            --shadow: 0 18px 48px rgba(48, 41, 32, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-        background:#FFFFFF;  
-        font-family: 'Libre Baskerville', serif;
-        text-align: justify;
-        margin-left: 50px; 
-        margin-right: 50px;
-        line-height:25px;
-        font-size: 15px;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Libre Baskerville", Georgia, serif;
+            font-size: 16px;
+            line-height: 1.72;
         }
 
-        #projtitle {
-        font-weight: bold;
-        }
-
-        #projabstract {
-        margin-left: 15px;
-        font-size: 12px;
-        }
-
-        #projdetails {
-            margin-bottom: 20px;
-        }
-
-        #projcoauthor {
-            color: #000000;
-            font-size: 15px;
-            font-weight: normal;
-        }
-
-        #sep {
-            font-weight: 100000;
-            color: #000000;
-        }
-
-        #projme {
-            color: #000000;
-            font-size: 15px;
-            font-weight: bold;
-        }
-
-        #projlink {
-            color: #000000;
+        body::before {
+            content: "";
+            display: block;
+            height: 5px;
+            background: linear-gradient(90deg, #4b6f7a, #8a4b2c, #b08a3e);
         }
 
         a {
+            color: var(--accent-dark);
+            text-decoration: none;
+            text-underline-offset: 0.18em;
+        }
+
+        a:hover,
+        a:focus-visible {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        a:focus-visible,
+        summary:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        .page {
+            width: min(100% - 48px, 1240px);
+            margin: 0 auto;
+            padding: 70px 0 48px;
+        }
+
+        .site-header {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 32px;
+            align-items: end;
+            padding-bottom: 36px;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            color: var(--muted);
+            font-family: Inter, system-ui, sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.25rem, 6vw, 4.75rem);
+            line-height: 1.04;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            max-width: 620px;
+            margin: 18px 0 0;
+            color: var(--muted);
+            font-family: Inter, system-ui, sans-serif;
+            font-size: 1.02rem;
+            line-height: 1.6;
+        }
+
+        .header-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: flex-end;
+            font-family: Inter, system-ui, sans-serif;
+        }
+
+        .header-links a,
+        .project-links a {
+            display: inline-flex;
+            align-items: center;
+            min-height: 34px;
+            padding: 6px 12px;
+            border: 1px solid var(--rule);
+            border-radius: 999px;
+            background: var(--paper);
+            color: var(--accent-dark);
+            font-size: 0.86rem;
+            font-weight: 600;
+            line-height: 1;
+            text-decoration: none;
+            transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
+        }
+
+        .header-links a:hover,
+        .header-links a:focus-visible,
+        .project-links a:hover,
+        .project-links a:focus-visible {
+            border-color: var(--accent);
+            background: var(--link-bg);
+            color: var(--accent-dark);
             text-decoration: none;
         }
 
-        a:link {
-            color: #000000;
+        main {
+            display: grid;
+            gap: 56px;
+            padding-top: 48px;
         }
 
-        a:visited {
-            color: #000000;
+        .section {
+            display: grid;
+            grid-template-columns: 150px minmax(0, 1fr);
+            gap: 54px;
+            align-items: start;
         }
 
-        a:hover {
-            color: #cd9a22;
-        }
-
-        .buttons {
-            margin-left: 15px;
-        }
-
-        .button-2 {
-            background-color: rgba(51, 51, 51, 0.05);
-            border-radius: 8px;
-            border-width: 0;
-            color: #333333;
-            cursor: pointer;
-            display: inline-block;
-            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 20px;
-            list-style: none;
+        .section-title {
+            position: sticky;
+            top: 24px;
             margin: 0;
-            padding: 6px 18px;
+            padding-top: 3px;
+            color: var(--accent-dark);
+            font-family: Inter, system-ui, sans-serif;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .bio-grid {
+            max-width: 980px;
+        }
+
+        .bio-copy p {
+            margin: 0 0 1.15rem;
+        }
+
+        .bio-copy::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .profile-pic-wrapper {
+            float: right;
+            width: min(36%, 320px);
+            aspect-ratio: 1;
+            margin: 0 0 22px 44px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1px solid var(--rule);
+            background: var(--paper);
+            box-shadow: var(--shadow);
+        }
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .publication-list {
+            display: grid;
+            gap: 18px;
+        }
+
+        .project {
+            padding: 0 0 18px;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .project-title {
+            cursor: pointer;
+            list-style-position: outside;
+            color: var(--text);
+            font-weight: 700;
+            line-height: 1.55;
+        }
+
+        .project-title::marker {
+            color: var(--accent);
+            font-size: 0.85em;
+        }
+
+        .project-meta,
+        .project-me,
+        .sep {
+            color: var(--muted);
+            font-weight: 400;
+        }
+
+        .project-me {
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .sep {
+            margin: 0 6px;
+            font-family: Inter, system-ui, sans-serif;
+            font-size: 0.82rem;
+        }
+
+        .project-links {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+        .project-links a {
+            min-height: 28px;
+            padding: 5px 9px;
+            font-size: 0.76rem;
+            text-transform: uppercase;
+        }
+
+        .project-abstract {
+            max-width: 780px;
+            margin: 12px 0 0 24px;
+            color: #333934;
+            font-size: 0.9rem;
+            line-height: 1.72;
+        }
+
+        .site-footer {
+            margin-top: 64px;
+            padding-top: 28px;
+            border-top: 1px solid var(--rule);
+            color: var(--muted);
+            font-family: Inter, system-ui, sans-serif;
+            font-size: 0.9rem;
             text-align: center;
-            transition: all 200ms;
-            vertical-align: baseline;
-            white-space: nowrap;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            margin-right: 10px;
         }
 
-        #inprogress #projtitle {
-            color: #8f25df;
+        @media (max-width: 980px) {
+            .page {
+                width: min(100% - 28px, 680px);
+                padding-top: 44px;
+            }
+
+            .site-header,
+            .section {
+                grid-template-columns: 1fr;
+            }
+
+            .site-header {
+                gap: 24px;
+            }
+
+            .header-links {
+                justify-content: flex-start;
+            }
+
+            .section {
+                gap: 18px;
+            }
+
+            .section-title {
+                position: static;
+            }
+
+            .profile-pic-wrapper {
+                width: min(34%, 220px);
+                margin-left: 28px;
+            }
         }
 
-        #working #projtitle {
-            color: #2f699f;
-        }
+        @media (max-width: 560px) {
+            body {
+                font-size: 15px;
+                line-height: 1.68;
+            }
 
-        #published #projtitle {
-            color: #cb5933;
-        }
+            .page {
+                width: min(100% - 24px, 520px);
+                padding-top: 34px;
+            }
 
-        #working, #published, #bio, #inprogress {
-            margin-left: 40px;
-            padding-bottom: 5px;
-        }
+            main {
+                gap: 44px;
+                padding-top: 38px;
+            }
 
-        .profile-pic-wrapper { 
-            width: 250px;
-            height: 250px;
-            border-radius: 100%; 
-            overflow: hidden; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-        } 
+            .header-links a {
+                flex: 1 1 auto;
+                justify-content: center;
+            }
 
-        .profile-pic { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+            .project-title {
+                line-height: 1.5;
+            }
+
+            .sep {
+                display: none;
+            }
+
+            .project-meta,
+            .project-links {
+                display: block;
+                margin: 6px 0 0;
+            }
+
+            .project-links {
+                display: flex;
+            }
+
+            .project-abstract {
+                margin-left: 0;
+                font-size: 0.88rem;
+            }
+
+            .profile-pic-wrapper {
+                float: none;
+                width: min(62vw, 220px);
+                margin: 0 0 22px;
+            }
         }
     </style>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 
   </head>
 
   <body>
-    <div id="top" style="">
-        
-        <center>
+    <div class="page">
+        <header class="site-header">
+            <div>
+                <p class="eyebrow">Stanford Economics</p>
+                <h1>Anand Siththaranjan</h1>
+                <p class="subtitle">PhD student studying economic theory and market design.</p>
+            </div>
 
-        <p style = "font-size:40px; margin-bottom:10px; margin-top:80px;">
-            Anand Siththaranjan
-        </p>
+            <nav class="header-links" aria-label="Profile links">
+                <a href="https://scholar.google.com/citations?hl=en&amp;user=qYXPDjQAAAAJ">Google Scholar</a>
+                <a href="mailto:anandks@stanford.edu">Email</a>
+                <a href="assets/pdfs/cv.pdf">CV</a>
+            </nav>
+        </header>
 
-        <p style = "font-size: 15px; margin-bottom:0px; color:#525252; ">
-            PhD Student in Economics at Stanford
-        </p>
+        <main>
+            <section class="section" aria-labelledby="bio-heading">
+                <h2 class="section-title" id="bio-heading">Bio</h2>
+                <div class="bio-grid">
+                    <div class="bio-copy">
+                        <div class="profile-pic-wrapper">
+                            <img src="assets/imgs/prof-pic.jpg" class="profile-pic" alt="Anand Siththaranjan">
+                        </div>
 
-        <p>
-            <a
-            href="https://scholar.google.com/citations?hl=en&user=qYXPDjQAAAAJ">Google
-            Scholar</a> | <a href="mailto:anandks@stanford.edu">Email</a> | <a href="assets/pdfs/cv.pdf">CV</a>
-        </p>
+                        <p>Hello! I'm Anand, a PhD student at Stanford Economics. My research interests are in game theory (pure, applied, cooperative, and non-cooperative), with a focus on communication and market design. My work often intersects with artificial intelligence, control theory, healthcare, and philosophy.</p>
 
-        <br>
+                        <p>I have published at control theory and robotics venues - such as ICRA, CDC, and LCSS - and AI venues - such as ICML, ICLR, and TMLR.</p>
 
-        </center>
-    </div>
-    <div style="margin-left: 10%; margin-bottom: 5px;">
-    <p style="font-size:20px;"> <b> bio </b>  </p>
-    <div style="width: 100%; display: inline-block;">
-        <div id="bio" style="width:50%; float:left; margin-right: 50px;">
-            <p>
-                Hello! I’m Anand, a PhD student at Stanford Economics. My
-                research interests are in game theory (pure, applied,
-                cooperative, and non-cooperative), with a
-                focus on
-                communication and market design. My work often intersects with
-                artificial intelligence, control theory, healthcare, and
-                philosophy.
-                
-                <br><br>
+                        <p>Before Stanford, I was at Berkeley where I did my BA in Computer Science (2017-21), MA in Mathematics (2025), and PhD in Electrical Engineering and Computer Science (2021-2025). I was advised by Stuart Russell and Claire Tomlin, and was a member of the Center for Human-Compatible AI (CHAI), the Hybrid Systems Lab (HSL), and Berkeley AI Research (BAIR). I also was a fellow at the Kavli Center for Science, Ethics, and the Public, as well as a PIBBSS Fellow (2022).</p>
+                    </div>
+                </div>
+            </section>
 
-                I have published at control theory and robotics venues -
-                such as ICRA, CDC, and LCSS - and AI venues - such as
-                ICML, ICLR, and TMLR.
+            <section class="section" aria-labelledby="working-heading">
+                <h2 class="section-title" id="working-heading">Working Papers</h2>
+                <div class="publication-list working">
 
-                <br><br>
-                
-                Before Stanford, I was at Berkeley where I did my BA in Computer
-                Science (2017-21), MA in Mathematics (2025), and PhD in
-                Electrical Engineering and Computer Science (2021-2025). I was
-                advised by Stuart Russell and Claire Tomlin, and was a member
-                of the Center for Human-Compatible AI (CHAI), the Hybrid Systems
-                Lab (HSL), and Berkeley AI Research (BAIR). I also was a fellow
-                at the Kavli Center for Science, Ethics, and the Public, as
-                well as a PIBBSS Fellow (2022).
-                
-                <br><br>
-            </p>
-        </div>
+        <details class="project">
+            <summary class="project-title">Multi-Modal Paired Exchange
 
-        <div class="profile-pic-wrapper">
-            <img src="assets/imgs/prof-pic.jpg" class="profile-pic">
-        </div>
-    </div>
+                <span class="sep">/</span>
 
-    <br>
+                <span class="project-meta"> <span class="project-me">Anand Siththaranjan</span></span>
 
-    <p style="font-size:20px;"> <b> working papers </b>  </p>
-    <div id="working" style="">
+                <span class="sep">/</span>
 
-        <details id="projdetails">
-            <summary id="projtitle">Multi-Modal Paired Exchange
-
-                <span id="sep">\\</span>
-
-                <span id="projcoauthor"> <span id="projme">Anand Siththaranjan</span></span>
-                
-                <span id="sep">\\</span>
-                
-                <span id="projlink">    
-                    [<a href="assets/pdfs/multi-modal.pdf">pdf</a>]
+                <span class="project-links">
+                    <a href="assets/pdfs/multi-modal.pdf">pdf</a>
                 </span>
             </summary>
-            <p id="projabstract">
+            <p class="project-abstract">
                 This paper develops a model of paired exchange that integrates
                 multiple donation technologies with observable risks. Through
                 integration, we aim to enrich the set of potential patient-donor matches
@@ -228,38 +427,38 @@
         </details>
 
 
-        <details id="projdetails">
-            <summary id="projtitle">Kidney Exchange with Multiple Donors
+        <details class="project">
+            <summary class="project-title">Kidney Exchange with Multiple Donors
 
-                <span id="sep">\\</span>
+                <span class="sep">/</span>
 
-                <span id="projcoauthor"> <span id="projme">Anand Siththaranjan</span></span>
-                
-                <span id="sep">\\</span>
-                
-                <span id="projlink">    
-                    [<a href="assets/pdfs/multi-donor.pdf">pdf</a>]
+                <span class="project-meta"> <span class="project-me">Anand Siththaranjan</span></span>
+
+                <span class="sep">/</span>
+
+                <span class="project-links">
+                    <a href="assets/pdfs/multi-donor.pdf">pdf</a>
                 </span>
             </summary>
-            <p id="projabstract">
+            <p class="project-abstract">
                 This paper studies the problem of finding efficient, strategy-proof, and weak-core stable mechanisms for kidney paired exchange under cycle size restrictions. We allow patients to have multiple donors, where their private information is their strict preference over the donor used. We show that no desirable pairwise mechanism exists, but under mild conditions constructively show that such a mechanism exists when cycles of length three are allowed. Our results leverage the structure of blood type compatibility to overcome classic impossibility results due to cycle size restrictions, and we provide intuition to this end. When considering the number of transplants made, imposing strategy-proofness while allowing multiple donors introduces a tradeoff when compared to a complete information single-donor baseline. Nevertheless, we show through simulation using US population data that in most cases there is a relative increase in the number of transplants. With sufficiently many patients with more than one donor this can range from approximately $5$ to $20\%$.
             </p>
         </details>
 
-        <details id="projdetails">
-            <summary id="projtitle">When Can Communication Be Informative?
+        <details class="project">
+            <summary class="project-title">When Can Communication Be Informative?
 
-                <span id="sep">\\</span>
+                <span class="sep">/</span>
 
-                <span id="projcoauthor"> <span id="projme">Anand Siththaranjan</span> and Yuichiro Kamada</span>
-                
-                <span id="sep">\\</span>
+                <span class="project-meta"> <span class="project-me">Anand Siththaranjan</span> and Yuichiro Kamada</span>
 
-                <span id="projlink">    
-                    [<a href="assets/pdfs/communication.pdf">pdf</a>]
+                <span class="sep">/</span>
+
+                <span class="project-links">
+                    <a href="assets/pdfs/communication.pdf">pdf</a>
                 </span>
             </summary>
-            <p id="projabstract">
+            <p class="project-abstract">
                 When do cheap talk games admit informative equilibria? In a binary-action
                 model, we show that the alignment between Sender and Receiver preferences determines the existence of informative equilibria, or lack thereof. We provide a characterization of the equilibrium payoff set. When moving beyond the binary-action
                 setting, we find that the preference alignment no longer captures the existence of an
@@ -272,56 +471,58 @@
             </p>
         </details>
 
-        <details id="projdetails">
-            <summary id="projtitle">Intent Demonstration in General-Sum Dynamic Games via Iterative Linear-Quadratic Approximations
+        <details class="project">
+            <summary class="project-title">Intent Demonstration in General-Sum Dynamic Games via Iterative Linear-Quadratic Approximations
 
-                <span id="sep">\\</span>
+                <span class="sep">/</span>
 
-                <span id="projcoauthor">Jingqi Li et al.</span>
-                
-                <span id="sep">\\</span>
+                <span class="project-meta">Jingqi Li et al.</span>
 
-                <span id="projlink">    
-                    [<a href="https://arxiv.org/abs/2402.10182">arxiv</a>]
+                <span class="sep">/</span>
+
+                <span class="project-links">
+                    <a href="https://arxiv.org/abs/2402.10182">arxiv</a>
                 </span>
             </summary>
-            <p id="projabstract">
+            <p class="project-abstract">
                 Autonomous agents should be able to coordinate with other agents without knowing their intents ahead of time. While prior work has studied how agents can gather information about the intent of others, in this work, we study the inverse problem: how agents can demonstrate their intent to others, within the framework of general-sum dynamic games. We first present a model of this intent demonstration problem and then propose an algorithm that enables an agent to trade off their task performance and intent demonstration to improve the overall system's performance. To scale to continuous states and action spaces as well as to nonlinear dynamics and costs, our algorithm leverages linear-quadratic approximations with an efficient intent teaching guarantee. Our empirical results show that intent demonstration accelerates other agents' learning and enables the demonstrating agent to balance task performance with intent expression.
             </p>
         </details>
-    </div>
+                </div>
+            </section>
 
-    <p style="font-size:20px;"> <b> published </b>  </p>
-    <div id="published">
+            <section class="section" aria-labelledby="published-heading">
+                <h2 class="section-title" id="published-heading">Published</h2>
+                <div class="publication-list published">
 
-        <details id="projdetails">
-            <summary id="projtitle">Social Planning with the Replicator Dynamics
-                
-                <span id="sep">\\</span>
+        <details class="project">
+            <summary class="project-title">Social Planning with the Replicator Dynamics
 
-                <span id="projcoauthor">IEEE Control Systems Letters</span>
+                <span class="sep">/</span>
 
-                <span id="sep">\\</span>
+                <span class="project-meta">IEEE Control Systems Letters</span>
 
-                <span id="projcoauthor"> <span id="projme">Anand
+                <span class="sep">/</span>
+
+                <span class="project-meta"> <span class="project-me">Anand
                 Siththaranjan*</span> and Claire Tomlin</span>
-                
-                <span id="sep">\\</span>
 
-                <span id="projlink">    
-                    [<a href="assets/pdfs/planning-replicator.pdf">pdf</a>]
+                <span class="sep">/</span>
+
+                <span class="project-links">
+                    <a href="assets/pdfs/planning-replicator.pdf">pdf</a>
                 </span>
             </summary>
-            <p id="projabstract">
+            <p class="project-abstract">
                 Approaches to social planning tend to assume that
                 the behavior of agents is at an equilibrium, yet in practice
-                people’s behavior gradually adapts to their experiences. In
+                people's behavior gradually adapts to their experiences. In
                 this work, a model of social planning under the replicator
                 dynamics is studied. This model allows for a social planner
                 to control the learning process of agents by influencing the
                 relative fitness of different strategies. The desiderata that such a
-                social planner would ideally achieve – exponential stability and
-                budget-balance – are described. Existence of a solution for any
+                social planner would ideally achieve - exponential stability and
+                budget-balance - are described. Existence of a solution for any
                 full-support distribution, as well as an analysis of its properties,
                 are shown constructively by leveraging classical tools from
                 geometric control theory. Though the solution is optimal in an
@@ -332,136 +533,136 @@
             </p>
         </details>
 
-        <details id="projdetails">
-            <summary id="projtitle">Distributional Preference Learning
+        <details class="project">
+            <summary class="project-title">Distributional Preference Learning
 
-                <span id="sep">\\</span>
+                <span class="sep">/</span>
 
-                <span id="projcoauthor">International Conference on Learning
+                <span class="project-meta">International Conference on Learning
                 Representation (ICLR 2024)</span>
 
 
-                <span id="sep">\\</span>
+                <span class="sep">/</span>
 
-                <span id="projcoauthor"><span id="projme">Anand
+                <span class="project-meta"><span class="project-me">Anand
                 Siththaranjan*</span>, Cassidy Laidlaw*, and Dylan
                 Hadfield-Menell</span>
-                
-                <span id="sep">\\</span>
 
-                <span id="projlink">    
-                    [<a href="https://arxiv.org/abs/2312.08358">arxiv</a>]
-                    [<a href="https://github.com/cassidylaidlaw/hidden-context">code</a>]
+                <span class="sep">/</span>
+
+                <span class="project-links">
+                    <a href="https://arxiv.org/abs/2312.08358">arxiv</a>
+                    <a href="https://github.com/cassidylaidlaw/hidden-context">code</a>
                 </span>
             </summary>
-            <p id="projabstract">
+            <p class="project-abstract">
                 In practice, preference learning from human feedback depends on incomplete data with hidden context. Hidden context refers to data that affects the feedback received, but which is not represented in the data used to train a preference model. This captures common issues of data collection, such as having human annotators with varied preferences, cognitive processes that result in seemingly irrational behavior, and combining data labeled according to different criteria. We prove that standard applications of preference learning, including reinforcement learning from human feedback (RLHF), implicitly aggregate over hidden contexts according to a well-known voting rule called Borda count. We show this can produce counter-intuitive results that are very different from other methods which implicitly aggregate via expected utility. Furthermore, our analysis formalizes the way that preference learning from users with diverse values tacitly implements a social choice function. A key implication of this result is that annotators have an incentive to misreport their preferences in order to influence the learned model, leading to vulnerabilities in the deployment of RLHF. As a step towards mitigating these problems, we introduce a class of methods called distributional preference learning (DPL). DPL methods estimate a distribution of possible score values for each alternative in order to better account for hidden context. Experimental results indicate that applying DPL to RLHF for LLM chatbots identifies hidden context in the data and significantly reduces subsequent jailbreak vulnerability.
             </p>
         </details>
 
-        <details id="projdetails">
-            <summary id="projtitle">AI Alignment with Changing and Influenceable
+        <details class="project">
+            <summary class="project-title">AI Alignment with Changing and Influenceable
             Reward Functions
 
-                <span id="sep">\\</span>
+                <span class="sep">/</span>
 
-                <span id="projcoauthor">International Conference on Machine
+                <span class="project-meta">International Conference on Machine
                 Learning (ICML 2024)</span>
-                
-                <span id="sep">\\</span>
 
-                <span id="projcoauthor">Micah Carroll et al.</span>
-                
-                <span id="sep">\\</span>
+                <span class="sep">/</span>
 
-                <span id="projlink">    
-                    [<a href="https://arxiv.org/abs/2405.17713">arxiv</a>]
+                <span class="project-meta">Micah Carroll et al.</span>
+
+                <span class="sep">/</span>
+
+                <span class="project-links">
+                    <a href="https://arxiv.org/abs/2405.17713">arxiv</a>
                 </span>
             </summary>
-            <p id="projabstract">
+            <p class="project-abstract">
                 Existing AI alignment approaches assume that preferences are static, which is unrealistic: our preferences change, and may even be influenced by our interactions with AI systems themselves. To clarify the consequences of incorrectly assuming static preferences, we introduce Dynamic Reward Markov Decision Processes (DR-MDPs), which explicitly model preference changes and the AI's influence on them. We show that despite its convenience, the static-preference assumption may undermine the soundness of existing alignment techniques, leading them to implicitly reward AI systems for influencing user preferences in ways users may not truly want. We then explore potential solutions. First, we offer a unifying perspective on how an agent's optimization horizon may partially help reduce undesirable AI influence. Then, we formalize different notions of AI alignment that account for preference change from the outset. Comparing the strengths and limitations of 8 such notions of alignment, we find that they all either err towards causing undesirable AI influence, or are overly risk-averse, suggesting that a straightforward solution to the problems of changing preferences may not exist. As there is no avoiding grappling with changing preferences in real-world settings, this makes it all the more important to handle these issues with care, balancing risks and capabilities. We hope our work can provide conceptual clarity and constitute a first step towards AI alignment practices which explicitly account for (and contend with) the changing and influenceable nature of human preferences.
             </p>
         </details>
 
-        <details id="projdetails">
-            <summary id="projtitle">Open Problems and Fundamental Limitations of
+        <details class="project">
+            <summary class="project-title">Open Problems and Fundamental Limitations of
             RLHF
 
-                <span id="sep">\\</span>
+                <span class="sep">/</span>
 
-                <span id="projcoauthor">Transactions on Machine Learning
-                Research (TMLR 2023) & International Conference on Learning
+                <span class="project-meta">Transactions on Machine Learning
+                Research (TMLR 2023) &amp; International Conference on Learning
                 Representations (ICLR 2025)</span>
 
-                <span id="sep">\\</span>
+                <span class="sep">/</span>
 
-                <span id="projcoauthor">Stephen Casper et al.</span>
-                
-                <span id="sep">\\</span>
+                <span class="project-meta">Stephen Casper et al.</span>
 
-                <span id="projlink">    
-                    [<a href="https://arxiv.org/abs/2307.15217">arxiv</a>]
+                <span class="sep">/</span>
+
+                <span class="project-links">
+                    <a href="https://arxiv.org/abs/2307.15217">arxiv</a>
                 </span>
             </summary>
-            <p id="projabstract">
+            <p class="project-abstract">
                 Reinforcement learning from human feedback (RLHF) is a technique for training AI systems to align with human goals. RLHF has emerged as the central method used to finetune state-of-the-art large language models (LLMs). Despite this popularity, there has been relatively little public work systematizing its flaws. In this paper, we (1) survey open problems and fundamental limitations of RLHF and related methods; (2) overview techniques to understand, improve, and complement RLHF in practice; and (3) propose auditing and disclosure standards to improve societal oversight of RLHF systems. Our work emphasizes the limitations of RLHF and highlights the importance of a multi-faceted approach to the development of safer AI systems.
             </p>
         </details>
 
-        <details id="projdetails">
-            <summary id="projtitle">On the Computational Consequences of Cost
+        <details class="project">
+            <summary class="project-title">On the Computational Consequences of Cost
             Function Design in Nonlinear Optimal Control
 
-                <span id="sep">\\</span>
+                <span class="sep">/</span>
 
-                <span id="projcoauthor">IEEE Conference on Decision and Control
+                <span class="project-meta">IEEE Conference on Decision and Control
                 (CDC 2022)</span>
 
-                <span id="sep">\\</span>
+                <span class="sep">/</span>
 
-                <span id="projcoauthor">Tyler Westenbroek et al.</span>
-                
-                <span id="sep">\\</span>
+                <span class="project-meta">Tyler Westenbroek et al.</span>
 
-                <span id="projlink">    
-                    [<a href="https://ieeexplore.ieee.org/abstract/document/9992830">ieee</a>]
+                <span class="sep">/</span>
+
+                <span class="project-links">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/9992830">ieee</a>
                 </span>
             </summary>
-            <p id="projabstract">
+            <p class="project-abstract">
                 Optimal control is an essential tool for stabilizing complex nonlinear systems. However, despite the extensive impacts of methods such as receding horizon control, dynamic programming and reinforcement learning, the design of cost functions for a particular system often remains a heuristic-driven process of trial and error. In this paper we seek to gain insights into how the choice of cost function interacts with the underlying structure of the control system and impacts the amount of computation required to obtain a stabilizing controller. We treat the cost design problem as a two-step process where the designer specifies outputs for the system that are to be penalized and then modulates the relative weighting of the inputs and the outputs in the cost. To characterize the computational burden associated to obtaining a stabilizing controller with a particular cost, we bound the prediction horizon required by receding horizon methods and the number of iterations required by dynamic programming methods to meet this requirement. Our theoretical results highlight a qualitative separation between what is possible, from a design perspective, when the chosen outputs induce either minimum-phase or non-minimum-phase behavior. Simulation studies indicate that this separation also holds for modern reinforcement learning methods.
             </p>
         </details>
 
-        <details id="projdetails">
-            <summary id="projtitle">Analyzing Human Models that Adapt Online
-                
-                <span id="sep">\\</span>
+        <details class="project">
+            <summary class="project-title">Analyzing Human Models that Adapt Online
 
-                <span id="projcoauthor">International Conference on Robotics and
+                <span class="sep">/</span>
+
+                <span class="project-meta">International Conference on Robotics and
                Automation (ICRA 2021)</span>
 
-                <span id="sep">\\</span>
+                <span class="sep">/</span>
 
-                <span id="projcoauthor">Andrea Bajcsy et al.</span>
-                
-                <span id="sep">\\</span>
+                <span class="project-meta">Andrea Bajcsy et al.</span>
 
-                <span id="projlink">    
-                    [<a href="https://ieeexplore.ieee.org/abstract/document/9561652">ieee</a>]
+                <span class="sep">/</span>
+
+                <span class="project-links">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/9561652">ieee</a>
                 </span>
             </summary>
-            <p id="projabstract">
-                Predictive human models often need to adapt their parameters online from human data. This raises previously ignored safety-related questions for robots relying on these models such as what the model could learn online and how quickly could it learn it. For instance, when will the robot have a confident estimate in a nearby human’s goal? Or, what parameter initializations guarantee that the robot can learn the human’s preferences in a finite number of observations? To answer such analysis questions, our key idea is to model the robot’s learning algorithm as a dynamical system where the state is the current model parameter estimate and the control is the human data the robot observes. This enables us to leverage tools from reachability analysis and optimal control to compute the set of hypotheses the robot could learn in finite time, as well as the worst and best-case time it takes to learn them. We demonstrate the utility of our analysis tool in four human-robot domains, including autonomous driving and indoor navigation.
+            <p class="project-abstract">
+                Predictive human models often need to adapt their parameters online from human data. This raises previously ignored safety-related questions for robots relying on these models such as what the model could learn online and how quickly could it learn it. For instance, when will the robot have a confident estimate in a nearby human's goal? Or, what parameter initializations guarantee that the robot can learn the human's preferences in a finite number of observations? To answer such analysis questions, our key idea is to model the robot's learning algorithm as a dynamical system where the state is the current model parameter estimate and the control is the human data the robot observes. This enables us to leverage tools from reachability analysis and optimal control to compute the set of hypotheses the robot could learn in finite time, as well as the worst and best-case time it takes to learn them. We demonstrate the utility of our analysis tool in four human-robot domains, including autonomous driving and indoor navigation.
             </p>
         </details>
-    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            Designed by me, inspired by <a href="https://agathepernoud.com/">this</a>
+        </footer>
     </div>
 
-    <center>
-        <p style = "font-size: 15px; margin-bottom:0px; color:#525252;
-        font-style:italic; padding-bottom: 60px;">
-            Designed by me, inspired by <a href="https://agathepernoud.com/">this</a>
-        </p>
-    </center>
   </body>
 </html>
